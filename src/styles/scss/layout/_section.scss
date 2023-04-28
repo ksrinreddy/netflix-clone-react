@@ -1,0 +1,49 @@
+@use "../abstracts" as a;
+@use "sass:math";
+
+// **********[ SECTION BASE ]**********
+
+// section-base ____define mixin which should take padding-y, padding-x values as arguments. This can be used on top-level/parent element of react component.
+
+@mixin section-base($py: base, $px: base) {
+  padding-block: a.p($py);
+  padding-inline: a.p($px);
+}
+
+// **********[ SECTION-Y ]**********
+
+// section-y ____define mixin which should take padding-y value as argument. This can be used on top-level/parent element of react component.
+
+@mixin section-y($py: x-large) {
+  padding-block: a.p($py);
+}
+
+// **********[ SECTION CENTER ]**********
+
+$section-widths: (
+  xx-small: a.px-rem(288),
+  x-small: a.px-rem(393),
+  small: a.px-rem(448),
+  medium: a.px-rem(736),
+  large: a.px-rem(992),
+  x-large: a.px-rem(1248),
+  xx-large: a.px-rem(1408),
+  50: 50vw,
+  60: 60vw,
+  70: 70vw,
+  80: 80vw,
+  90: 90vw,
+  95: 95vw,
+);
+
+@mixin section-center($width: 90vw, $max-width: large) {
+  width: $width;
+  @if map-has-key($section-widths, $max-width) {
+    max-width: map-get($section-widths, $max-width);
+  } @else if math.is-unitless($max-width) {
+    max-width: a.px-rem($max-width);
+  } @else {
+    @error 'Entered argument is not assigned in map, try another. Or it has units, try entering any pixels value without units.';
+  }
+  margin-inline: auto;
+}

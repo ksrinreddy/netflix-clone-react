@@ -1,0 +1,62 @@
+@use "sass:math";
+@use "./functions" as f;
+
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+// **********[ FONT-SIZE ]**********
+
+// font-body ____define variable
+
+$font-body: 1rem;
+
+// font-sizes ____define map using $font-body variable
+
+$font-sizes: (
+  x-small: $font-body * 0.67,
+  small: $font-body * 0.83,
+  base: $font-body,
+  medium: $font-body * 1.17,
+  large: $font-body * 1.5,
+  x-large: $font-body * 2,
+);
+
+// font-size funtion  ____define function which takes $key from font-sizes map or any unitless pixel value as argument and returns font-size value in rems
+
+@function fs($size: base) {
+  @if map-has-key($font-sizes, $size) {
+    $fs-value: map-get($font-sizes, $size);
+    @return $fs-value;
+  } @else if math.is-unitless($size) {
+    $fs-value: f.px-rem($size);
+    @return $fs-value;
+  } @else {
+    @error 'Entered argument is not assigned in map, try another. Or it has units, try entering any pixels value without units.';
+  }
+}
+
+// **********[ FONT-WEIGHT ]**********
+
+// font-weights ____define map of font-weights
+
+$font-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  x-bold: 900,
+);
+
+// font-weight function ____define font-weight funtion which takes $key from font-weights map or any unitless font-weight value as argument and returns font-weight value
+
+@function fw($fw-value: regular) {
+  @if map-has-key($font-weights, $fw-value) {
+    $fw-value: map-get($font-weights, $fw-value);
+    @return $fw-value;
+  } @else if math.is-unitless($fw-value) {
+    @return $fw-value;
+  } @else {
+    @error 'Entered argument is not assigned in map, try another. Or it has units, try entering valid font-weight value.';
+  }
+}

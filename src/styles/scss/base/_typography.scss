@@ -1,0 +1,24 @@
+@use "../abstracts/" as a;
+
+h1 {
+  font-size: clamp(a.fs(x-large), a.fs(base) + 2vw, 2 * a.fs(x-large));
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(a.fs(large), a.fs(base) + 1.5vw, 1.5 * a.fs(large));
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(a.fs(medium), a.fs(base) + 1vw, 1.17 * a.fs(medium));
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(a.$font-body, a.fs(small) + 0.25vw, 1.1 * a.$font-body);
+}
+
+p {
+  font-size: clamp(a.$font-body, a.fs(small) + 0.25vw, 1.1 * a.$font-body);
+}

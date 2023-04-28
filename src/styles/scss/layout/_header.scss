@@ -1,0 +1,10 @@
+@use "../abstracts" as a;
+
+// **********[ HEADER ]**********
+
+// header ____define mixin which should take padding-y, padding-x values as arguments.
+
+@mixin header($py: base, $px: base) {
+  padding-block: a.p($py);
+  padding-inline: a.p($px);
+}

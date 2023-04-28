@@ -1,0 +1,49 @@
+// **********[ COLOR VARIABLES ]**********
+
+// main-colors
+$clr-logo: rgba(229, 9, 20, 1);
+$clr-primary: #ff0000;
+$clr-secondary: #ffffff;
+$bg-body: #000000;
+$bg-navbar: #000000;
+$bg-footer: #000000;
+
+// text-colors
+$text-body: #ffffff;
+$text-dark: #333333;
+$text-white: #ffffff;
+$text-gray: gray;
+
+// faq
+$bg-faq: rgba(19, 33, 68, 1);
+$text-faq: rgba(255, 255, 255, 1);
+$bg-faq-hover: rgba(34, 51, 98, 1);
+
+// footer
+$text-footer: rgba(255, 255, 255, 0.7);
+
+// alert-colors
+
+$clr-success: #002aff;
+$clr-danger: #e50914;
+$clr-warning: #ffff00;
+
+// normal-colors
+
+$b-white: #ffffff;
+$b-black: #000000;
+$b-gray: rgb(123, 123, 123);
+
+// border color
+$clr-border-gray: rgba(128, 128, 128, 0.8);
+
+// btn bg colors
+$bg-signin: rgba(229, 9, 20, 1);
+$bg-btn-next: rgba(229, 9, 20, 1);
+
+// **********[ COLOR-SHADE VARIABLES ]**********
+
+// color-shades ____define shade varibles using percentage to use in lighten and darken functions
+
+$light: 10;
+$dark: 5;

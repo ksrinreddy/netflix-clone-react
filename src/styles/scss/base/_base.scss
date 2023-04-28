@@ -1,0 +1,9 @@
+@use "../abstracts/" as a;
+
+body {
+  background: a.$bg-body;
+  color: a.$text-body;
+  font-family: "Roboto", sans-serif;
+  font-size: a.$font-body;
+  line-height: 1.5;
+}
