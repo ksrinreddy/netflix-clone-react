@@ -1,0 +1,68 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.banner {
+  background: linear-gradient(
+      70deg,
+      rgb(50, 0, 0),
+      rgba(10, 0, 20, 0.9),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(/src/assets/images/banner-img-netflix.jpg) left/cover no-repeat;
+  min-height: 32rem;
+  border-radius: a.br(xx-large);
+  padding: a.p(60) a.p(24);
+  margin-bottom: a.m(24);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: a.g(base);
+
+  @include a.mq-up(600) {
+    padding: a.p(60) a.p(48);
+  }
+
+  @include a.mq-up(960) {
+    padding: a.p(60) a.p(72);
+    min-height: 32rem;
+  }
+
+  @include a.mq-up(1280) {
+    min-height: 43.75rem;
+    padding: a.p(94) a.p(96);
+  }
+
+  @include a.mq-up(1920) {
+    min-height: 47.5rem;
+    padding: a.p(94) a.p(240);
+  }
+
+  &__title {
+    font-size: a.fs(42);
+    line-height: 1.2;
+
+    @include a.mq-up(960) {
+      font-size: a.fs(48);
+      font-weight: a.fw(x-bold);
+    }
+    @include a.mq-up(1280) {
+      font-size: a.fs(64);
+    }
+
+    @include a.mq-up(1920) {
+      font-size: a.fs(88);
+      line-height: 1;
+    }
+  }
+
+  &__subtitle {
+    font-size: a.p(18);
+    font-weight: a.fw(medium);
+
+    @include a.mq-up(1280) {
+      font-size: a.fs(24);
+    }
+    @include a.mq-up(1920) {
+      font-size: a.fs(32);
+    }
+  }
+}
