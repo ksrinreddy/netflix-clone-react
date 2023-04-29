@@ -1141,4 +1141,29 @@ p {
 .account-page {
   max-width: 122.6875rem;
   margin-inline: auto;
+}
+
+.error {
+  max-width: 121rem;
+  margin-inline: auto;
+  text-align: center;
+  overflow-y: hidden;
+  background: #fff;
+  color: #000;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+@media screen and (min-width: 37.5rem) {
+  .error {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .error {
+    padding-inline: 3rem;
+  }
 }/*# sourceMappingURL=index.css.map */
