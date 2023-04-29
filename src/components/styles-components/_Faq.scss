@@ -1,0 +1,55 @@
+@use "../../styles/scss/abstracts/" as a;
+
+// SINGLE FAQ
+.faq {
+  background: a.$bg-faq;
+  color: a.$text-faq;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: a.p(24);
+    border-bottom: a.px-rem(1) solid darken(a.$bg-faq, 15);
+    transition: background-color 450ms;
+
+    &:hover {
+      cursor: pointer;
+      background: a.$bg-faq-hover;
+    }
+  }
+
+  &__title {
+    @include a.mq-down(549.98) {
+      font-size: a.fs(18);
+    }
+    font-size: a.fs(24);
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    color: a.$text-faq;
+
+    @include a.mq-down(549.98) {
+      font-size: a.fs(18);
+    }
+    font-size: a.fs(32);
+  }
+
+  &__desc-container {
+    height: 0;
+    overflow: hidden;
+    transition: all 250ms;
+  }
+
+  &__desc {
+    padding: a.p(24);
+    line-height: 1.4;
+
+    @include a.mq-down(549.98) {
+      font-size: a.fs(18);
+    }
+    font-size: a.fs(24);
+  }
+}

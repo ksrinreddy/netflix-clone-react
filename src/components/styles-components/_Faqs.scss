@@ -1,0 +1,42 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.faqs {
+  margin-top: a.m(52);
+  padding-inline: a.p(24);
+  padding-bottom: a.p(72);
+  width: 100%;
+  display: grid;
+  row-gap: a.g(base);
+
+  @include a.mq-up(600) {
+    padding-inline: a.p(48);
+  }
+
+  @include a.mq-up(960) {
+    padding-inline: a.p(72);
+  }
+
+  @include a.mq-up(1280) {
+    padding-inline: a.p(96);
+  }
+
+  @include a.mq-up(1920) {
+    padding-inline: a.p(240);
+    margin-top: a.m(62);
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-size: a.fs(32);
+
+    @include a.mq-up(600) {
+      font-size: a.fs(40);
+    }
+  }
+
+  &__container {
+    display: grid;
+    row-gap: a.g(small);
+    margin-bottom: a.m(small);
+  }
+}
