@@ -1,0 +1,42 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: a.g(x-small);
+  border: a.px-rem(1) solid a.$clr-border-gray;
+  padding: 1.2 * a.p(x-small) 1.4 * a.p(small);
+  border-radius: a.br(base);
+  height: a.px-rem(32);
+
+  &:focus-within {
+    outline: a.px-rem(2) solid a.$text-body;
+    outline-offset: a.px-rem(2);
+  }
+
+  @include a.mq-down(599.98) {
+    gap: 0;
+  }
+
+  @include a.mq-up(600) {
+    width: a.w(126);
+  }
+
+  &__icon {
+    font-size: a.fs(medium);
+    font-weight: a.fw(bold);
+  }
+
+  &__select {
+    background: none;
+    color: a.$text-body;
+    border: none;
+    outline: none;
+    font-size: a.fs(base);
+
+    @include a.mq-down(599.98) {
+      width: 20px;
+      overflow: hidden;
+    }
+  }
+}

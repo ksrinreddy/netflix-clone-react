@@ -1,0 +1,21 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signin-link {
+  background: a.$bg-signin;
+  color: a.$text-body;
+  text-transform: capitalize;
+  font-size: a.px-rem(14);
+  font-weight: a.fw(medium);
+  height: a.px-rem(32);
+  padding: a.p(xx-small) a.p(base);
+  border: none;
+  border-radius: a.br(base);
+  display: flex;
+  align-items: center;
+  transition: all 300ms;
+
+  &:hover {
+    background: darken(a.$bg-signin, 5);
+    cursor: pointer;
+  }
+}
