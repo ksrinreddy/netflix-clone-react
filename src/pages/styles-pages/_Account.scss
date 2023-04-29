@@ -1,0 +1,6 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.account-page {
+  max-width: a.w(1963);
+  margin-inline: auto;
+}

@@ -1,0 +1,67 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.movie {
+  &__wrapper {
+    min-width: a.px-rem(160);
+    height: auto;
+    position: relative;
+
+    @include a.mq-up(small) {
+      min-width: a.w(200);
+    }
+    @include a.mq-up(medium) {
+      min-width: a.w(240);
+    }
+    @include a.mq-up(large) {
+      min-width: a.w(280);
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(black, 0.5);
+    opacity: 0;
+    transition: all 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__desc {
+    padding: a.p(medium);
+  }
+
+  &__like-btn {
+    position: absolute;
+    top: a.px-rem(10);
+    left: a.px-rem(10);
+    background: none;
+    border: none;
+    z-index: 5;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__like-icon {
+    color: #fff;
+    z-index: 5;
+  }
+}

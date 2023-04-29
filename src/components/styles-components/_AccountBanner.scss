@@ -1,0 +1,78 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.account-banner {
+  height: a.px-rem(550);
+  width: 100%;
+  background: linear-gradient(to right, rgba(black, 0.7), rgba(black, 0.1));
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+
+  padding-inline: a.p(24);
+  margin-top: -5rem;
+
+  @include a.mq-up(600) {
+    padding-inline: a.p(32);
+    margin-top: -5.375rem;
+  }
+  @include a.mq-up(1280) {
+    padding-inline: a.p(48);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: a.px-rem(550);
+    object-fit: cover;
+    object-position: center;
+    overflow-y: hidden;
+    z-index: -5;
+  }
+
+  &__content {
+    display: grid;
+    row-gap: a.g(small);
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    align-items: center;
+    gap: a.g(small);
+  }
+
+  &__btn-play {
+    padding: a.p(small) a.p(base);
+    border: none;
+    transition: all 300ms;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__btn-watch-later {
+    padding: a.p(small) a.p(base);
+    background: transparent;
+    border: a.px-rem(1) solid gray;
+    color: gray;
+    transition: all 300ms;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__movie-date {
+    font-size: a.fs(14);
+    color: gray;
+  }
+
+  &__movie-overview {
+    font-size: a.fs(small);
+    max-width: a.w(500);
+  }
+}
