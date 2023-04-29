@@ -1,0 +1,88 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signup-page {
+  background: #ffffff;
+  color: #333333;
+
+  &__step-center {
+    min-height: calc(100vh - 5rem);
+    max-width: a.px-rem(400);
+    overflow: hidden;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+
+    @include a.mq-up(600) {
+      text-align: center;
+    }
+  }
+
+  &__step-content {
+    padding: a.p(32);
+  }
+
+  &__step-img-wrapper {
+    color: a.$bg-btn-next;
+    margin-bottom: a.m(medium);
+
+    .laptop-icon {
+      font-size: a.fs(72);
+    }
+    .desktop-icon {
+      font-size: a.fs(90);
+    }
+    .tablet-icon {
+      font-size: a.fs(48);
+    }
+    .mobile-icon {
+      font-size: a.fs(32);
+    }
+  }
+
+  &__step-indicator {
+    text-transform: uppercase;
+    font-size: a.fs(small);
+    font-weight: a.fw(light);
+    letter-spacing: a.ls(xx-small);
+
+    span {
+      font-weight: a.fw(medium);
+    }
+  }
+
+  &__step-title {
+    letter-spacing: a.ls(xx-small);
+    font-weight: a.fw(medium);
+    font-size: a.fs(32);
+    line-height: 1.3;
+    margin-bottom: a.m(small);
+  }
+
+  &__step-desc {
+    font-size: a.fs(18);
+    font-weight: a.fw(light);
+    line-height: 1.3;
+    margin-bottom: a.m(medium);
+  }
+
+  &__step-btn-next {
+    background: a.$bg-btn-next;
+    border: none;
+    color: a.$text-white;
+    font-size: a.fs(24);
+    font-weight: a.fw(regular);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: a.p(9) a.p(16);
+    border-radius: a.br(base);
+    max-width: a.w(500);
+    margin-inline: auto;
+    transition: all 300ms;
+
+    &:hover {
+      background: darken(a.$bg-btn-next, 5);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-const SharedSignUp = () => {
-  return <div>SharedSignUp</div>;
+const SignUp = () => {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 
-export default SharedSignUp;
+export default SignUp;

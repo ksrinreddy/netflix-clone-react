@@ -1,0 +1,71 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signup-page {
+  &__step-center {
+    &.regForm-center {
+      max-width: a.w(500);
+      margin-inline: auto;
+      text-align: left;
+    }
+  }
+
+  &__reg-form {
+    &__input-label-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: a.px-rem(50);
+      margin-bottom: a.m(base);
+
+      input {
+        height: 100%;
+        background: #fff;
+        color: #333;
+        border: a.px-rem(1) solid #737373;
+        padding-inline: a.p(20);
+        padding-block: a.p(4);
+        padding-top: a.p(22);
+        border-radius: a.br(base);
+        font-size: a.fs(16);
+        line-height: 1.5;
+      }
+
+      label {
+        position: absolute;
+        pointer-events: none;
+        left: a.px-rem(20);
+        transform: translateY(80%) scale(1);
+        transform-origin: top left;
+        transition: transform 300ms;
+        color: #9b9b9b;
+        font-size: a.fs(small);
+        font-weight: a.fw(light);
+
+        &.filled-state {
+          transform: translateY(25%) scale(0.8);
+        }
+      }
+
+      &:focus-within {
+        input {
+          outline: none;
+        }
+
+        label {
+          transform: translateY(25%) scale(0.8);
+        }
+      }
+
+      @include a.mq-up(600) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__step-btn-next {
+    &.regForm {
+      width: 100%;
+      margin-top: a.m(32);
+    }
+  }
+}

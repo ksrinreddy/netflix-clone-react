@@ -1,0 +1,35 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signup-page {
+  &__plan-check-circle {
+    color: a.$bg-btn-next;
+    font-size: a.fs(62);
+    margin-bottom: a.m(16);
+  }
+
+  &__plan-header {
+    margin-bottom: a.m(24);
+  }
+
+  &__plan-desc {
+    display: grid;
+    justify-items: start;
+    row-gap: a.g(16);
+    margin-bottom: a.m(48);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: a.g(8);
+      font-size: a.fs(18);
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        color: a.$bg-btn-next;
+        font-size: a.fs(32);
+      }
+    }
+  }
+}

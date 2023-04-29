@@ -1,0 +1,16 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signup-page {
+  &__step-center {
+    max-width: a.px-rem(500);
+  }
+  &__payment-lock-icon {
+    color: a.$bg-btn-next;
+    font-size: a.fs(32);
+    margin-bottom: a.m(large);
+  }
+
+  &__step-security-desc {
+    margin-bottom: a.m(large);
+  }
+}

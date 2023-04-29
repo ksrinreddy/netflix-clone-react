@@ -1,17 +1,28 @@
 import React from "react";
 import { useRef } from "react";
 import { BsChevronRight } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setSignUpEmail, handleSignUp } from "../features/signUp/signUpSlice";
 
 const SignUpForm = () => {
   const { signUpEmail } = useSelector((store) => store.signUp);
   const signUpEmailRef = useRef(null);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <div className="signup-form">
       <form
         className="signup-form__form"
         onSubmit={(e) => {
           e.preventDefault();
+          if (!signUpEmail) {
+            signUpEmailRef.current.focus();
+            return;
+          }
+          dispatch(handleSignUp());
+          navigate("/signup");
         }}
       >
         <p className="signup-form__desc">
@@ -25,6 +36,9 @@ const SignUpForm = () => {
               id="signup-email"
               ref={signUpEmailRef}
               value={signUpEmail}
+              onChange={(e) => {
+                dispatch(setSignUpEmail(e.target.value));
+              }}
             />
             <label
               htmlFor="signup-email"
