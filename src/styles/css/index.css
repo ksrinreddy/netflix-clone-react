@@ -354,6 +354,68 @@ p {
   font-size: 1.375rem;
 }
 
+.platform {
+  padding: 2.75rem 1.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media screen and (min-width: 37.5rem) {
+  .platform {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .platform {
+    padding: 3.75rem 4.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .platform {
+    padding: 5.875rem 6rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .platform {
+    padding: 4.25rem 15rem;
+  }
+}
+.platform__info {
+  display: grid;
+  row-gap: 1rem;
+}
+@media screen and (min-width: 37.5rem) {
+  .platform__info.order-2 {
+    order: 2;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .platform__title {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}
+.platform__desc {
+  line-height: 1.3;
+}
+@media screen and (min-width: 80rem) {
+  .platform__desc {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .platform__desc {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 37.5rem) {
+  .platform__img.order-1 {
+    order: 1;
+  }
+}
+
 .footer {
   display: grid;
   row-gap: 2rem;
