@@ -169,4 +169,82 @@ p {
 .signin-link:hover {
   background: #cc0812;
   cursor: pointer;
+}
+
+.footer {
+  display: grid;
+  row-gap: 2rem;
+  margin-top: 1.5rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  max-width: 121rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media screen and (min-width: 37.5rem) {
+  .footer {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer {
+    padding-inline: 3rem;
+  }
+}
+.footer__tele-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__tele-no {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer__tele-no-underline {
+  transition: all 300ms;
+}
+.footer__tele-no-underline:hover {
+  text-decoration: underline;
+}
+.footer__links {
+  display: grid;
+  row-gap: 0.5rem;
+}
+@media screen and (min-width: 37.5rem) {
+  .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 60rem) {
+  .footer__links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  transition: all 300ms;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer .language {
+  justify-self: start;
+}
+@media screen and (max-width: 37.49875rem) {
+  .footer .language {
+    gap: 0.25rem;
+  }
+}
+@media screen and (max-width: 37.49875rem) {
+  .footer .language__select {
+    width: auto;
+  }
+}
+.footer__country {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.83rem;
 }/*# sourceMappingURL=index.css.map */
