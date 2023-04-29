@@ -23,6 +23,7 @@
     align-items: center;
     gap: a.g(small);
     overflow-x: scroll;
+    overflow-y: hidden;
     position: relative;
 
     &::-webkit-scrollbar {

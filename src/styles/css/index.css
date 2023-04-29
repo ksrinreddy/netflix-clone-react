@@ -836,6 +836,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
 }
 .movies-row__wrapper::-webkit-scrollbar {
