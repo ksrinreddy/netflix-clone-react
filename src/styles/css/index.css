@@ -50,4 +50,14 @@ h4 {
 
 p {
   font-size: clamp(1rem, 0.83rem + 0.25vw, 1.1rem);
+}
+
+.loading__center {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.loading__text {
+  letter-spacing: 0.03125rem;
 }/*# sourceMappingURL=index.css.map */

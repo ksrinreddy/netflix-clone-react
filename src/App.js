@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
 import Account from "./pages/Account";
 import Error from "./pages/Error";
@@ -15,6 +17,11 @@ import SignUpPlanForm from "./pages/SignUpPlanForm";
 import SignUpRegForm from "./pages/SignUpRegForm";
 
 const App = () => {
+  const { isLoading } = useSelector((store) => store.loading);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <BrowserRouter>
       <Navbar />

@@ -1,0 +1,14 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.loading {
+  &__center {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+  }
+
+  &__text {
+    letter-spacing: a.ls(xx-small);
+  }
+}
