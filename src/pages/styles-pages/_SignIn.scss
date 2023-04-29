@@ -1,0 +1,15 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signin-page {
+  &.wrapper {
+    background: a.$bg-body;
+
+    @include a.mq-up(740) {
+      background: linear-gradient(rgba(black, 0.5), rgba(black, 0.5)),
+        url("../../assets/images/bg-signin.jpg") left/cover no-repeat;
+      padding-block: a.p(90);
+      margin-top: -5.375rem;
+      z-index: -2;
+    }
+  }
+}

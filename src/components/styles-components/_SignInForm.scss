@@ -1,0 +1,178 @@
+@use "../../styles/scss/abstracts/" as a;
+
+.signin-form {
+  &__wrapper {
+    width: 90vw;
+    margin-inline: auto;
+    padding-block: a.p(18);
+    display: grid;
+    row-gap: a.g(x-large);
+    align-items: start;
+
+    @include a.mq-up(740) {
+      background: a.$bg-body;
+      width: a.px-rem(450);
+      padding-block: a.p(62);
+      padding-inline: a.p(68);
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-size: a.fs(32);
+    font-weight: a.fw(medium);
+    letter-spacing: a.ls(xx-small);
+  }
+
+  &__form {
+    display: grid;
+    row-gap: a.g(x-large);
+
+    @include a.mq-up(740) {
+      padding-bottom: a.p(42);
+    }
+  }
+
+  &__inputs-wrapper {
+    display: grid;
+    row-gap: a.g(base);
+    margin-bottom: a.m(small);
+  }
+
+  // input-label-wrapper
+
+  &__input-label-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: a.px-rem(50);
+
+    input {
+      height: 100%;
+      background: #333;
+      color: a.$text-body;
+      border: none;
+      padding-inline: a.p(20);
+      padding-block: a.p(4);
+      padding-top: a.p(22);
+      border-radius: a.br(base);
+      font-size: a.fs(16);
+      line-height: 1.5;
+    }
+
+    label {
+      position: absolute;
+      pointer-events: none;
+      left: a.px-rem(20);
+      transform: translateY(80%) scale(1);
+      transform-origin: top left;
+      transition: transform 300ms;
+      color: #9b9b9b;
+      font-size: a.fs(small);
+      font-weight: a.fw(light);
+
+      &.filled-state {
+        transform: translateY(25%) scale(0.8);
+      }
+    }
+
+    &:focus-within {
+      input {
+        outline: none;
+      }
+
+      label {
+        transform: translateY(25%) scale(0.8);
+      }
+    }
+
+    @include a.mq-up(600) {
+      flex-grow: 1;
+    }
+  }
+  // end of input-label-wrapper
+
+  &__signin-btn-wrapper {
+    display: grid;
+    row-gap: a.g(10);
+  }
+
+  &__signin-submit-btn {
+    background: a.$bg-signin;
+    color: a.$text-body;
+    text-transform: capitalize;
+    font-size: a.px-rem(16);
+    font-weight: a.fw(medium);
+    height: a.px-rem(48);
+    padding: a.p(xx-small) a.p(base);
+    border: none;
+    border-radius: a.br(base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+
+    &:hover {
+      background: darken(a.$bg-signin, 5);
+      cursor: pointer;
+    }
+  }
+
+  &__remember-help-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: a.fs(small);
+    font-weight: a.fw(light);
+    color: darken(a.$text-footer, 10);
+  }
+
+  &__remember {
+    display: flex;
+    align-items: center;
+    gap: a.g(small);
+
+    input {
+      font-size: a.fs(base);
+    }
+  }
+
+  &__signin-help-link {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+    color: darken(a.$text-footer, 10);
+  }
+
+  &__other-wrapper {
+    display: grid;
+    row-gap: a.g(10);
+    padding-bottom: a.p(120);
+  }
+
+  &__signup-text {
+    color: #737373;
+    display: flex;
+    gap: a.g(x-small);
+  }
+
+  &__signup-link {
+    color: a.$text-body;
+
+    span {
+      color: #737373;
+    }
+  }
+
+  &__security-text {
+    color: lighten(#737373, 10);
+    font-size: a.fs(small);
+    font-weight: a.fw(light);
+    line-height: 1.3;
+  }
+
+  &__learn-more {
+    color: #0071eb;
+    font-weight: a.fw(light);
+  }
+}

@@ -589,6 +589,157 @@ p {
   font-size: 0.83rem;
 }
 
+.signin-form__wrapper {
+  width: 90vw;
+  margin-inline: auto;
+  padding-block: 1.125rem;
+  display: grid;
+  row-gap: 2rem;
+  align-items: start;
+}
+@media screen and (min-width: 46.25rem) {
+  .signin-form__wrapper {
+    background: #000000;
+    width: 28.125rem;
+    padding-block: 3.875rem;
+    padding-inline: 4.25rem;
+  }
+}
+.signin-form__title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.03125rem;
+}
+.signin-form__form {
+  display: grid;
+  row-gap: 2rem;
+}
+@media screen and (min-width: 46.25rem) {
+  .signin-form__form {
+    padding-bottom: 2.625rem;
+  }
+}
+.signin-form__inputs-wrapper {
+  display: grid;
+  row-gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.signin-form__input-label-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 3.125rem;
+}
+.signin-form__input-label-wrapper input {
+  height: 100%;
+  background: #333;
+  color: #ffffff;
+  border: none;
+  padding-inline: 1.25rem;
+  padding-block: 0.25rem;
+  padding-top: 1.375rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.signin-form__input-label-wrapper label {
+  position: absolute;
+  pointer-events: none;
+  left: 1.25rem;
+  transform: translateY(80%) scale(1);
+  transform-origin: top left;
+  transition: transform 300ms;
+  color: #9b9b9b;
+  font-size: 0.83rem;
+  font-weight: 300;
+}
+.signin-form__input-label-wrapper label.filled-state {
+  transform: translateY(25%) scale(0.8);
+}
+.signin-form__input-label-wrapper:focus-within input {
+  outline: none;
+}
+.signin-form__input-label-wrapper:focus-within label {
+  transform: translateY(25%) scale(0.8);
+}
+@media screen and (min-width: 37.5rem) {
+  .signin-form__input-label-wrapper {
+    flex-grow: 1;
+  }
+}
+.signin-form__signin-btn-wrapper {
+  display: grid;
+  row-gap: 0.625rem;
+}
+.signin-form__signin-submit-btn {
+  background: rgb(229, 9, 20);
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 3rem;
+  padding: 0.125rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+.signin-form__signin-submit-btn:hover {
+  background: #cc0812;
+  cursor: pointer;
+}
+.signin-form__remember-help-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: rgba(230, 230, 230, 0.7);
+}
+.signin-form__remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.signin-form__remember input {
+  font-size: 1rem;
+}
+.signin-form__signin-help-link {
+  color: rgba(230, 230, 230, 0.7);
+}
+.signin-form__signin-help-link::first-letter {
+  text-transform: capitalize;
+}
+.signin-form__other-wrapper {
+  display: grid;
+  row-gap: 0.625rem;
+  padding-bottom: 7.5rem;
+}
+.signin-form__signup-text {
+  color: #737373;
+  display: flex;
+  gap: 0.25rem;
+}
+.signin-form__signup-link {
+  color: #ffffff;
+}
+.signin-form__signup-link span {
+  color: #737373;
+}
+.signin-form__security-text {
+  color: #8d8d8d;
+  font-size: 0.83rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.signin-form__learn-more {
+  color: #0071eb;
+  font-weight: 300;
+}
+
 .home {
   padding-inline: 1.5rem;
 }
@@ -806,4 +957,16 @@ p {
 }
 .signup-page__step-security-desc {
   margin-bottom: 2rem;
+}
+
+.signin-page.wrapper {
+  background: #000000;
+}
+@media screen and (min-width: 46.25rem) {
+  .signin-page.wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/bg-signin.jpg") left/cover no-repeat;
+    padding-block: 5.625rem;
+    margin-top: -5.375rem;
+    z-index: -2;
+  }
 }/*# sourceMappingURL=index.css.map */
